@@ -4,18 +4,37 @@ namespace App19._11.Entities
 {
     public class BubbleSorter
     {
-        public void Sort(int[] array)
+        public void Sort(int[] array, string order)
         {
-            int n = array.Length;
-            for (int i = 0; i < n - 1; i++)
+            if (order == "asc")
             {
-                for (int j = 0; j < n - 1 - i; j++)
+                int n = array.Length;
+                for (int i = 0; i < n - 1; i++)
                 {
-                    if (array[j] > array[j + 1])
+                    for (int j = 0; j < n - 1 - i; j++)
                     {
-                        int temp = array[j];
-                        array[j] = array[j + 1];
-                        array[j + 1] = temp;
+                        if (array[j] > array[j + 1])
+                        {
+                            int temp = array[j];
+                            array[j] = array[j + 1];
+                            array[j + 1] = temp;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                int n = array.Length;
+                for (int i = 0; i < n - 1; i++)
+                {
+                    for (int j = 0; j < n - 1 - i; j++)
+                    {
+                        if (array[j] < array[j + 1])
+                        {
+                            int temp = array[j];
+                            array[j] = array[j + 1];
+                            array[j + 1] = temp;
+                        }
                     }
                 }
             }
