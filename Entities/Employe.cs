@@ -2,18 +2,18 @@
 {
     internal class Employe
     {
-        public string Name { get; set; }
-        public string Birthday { get; set; }
-        public string Phone { get; set; }
+        public string name { get; set; }
+        public string birthday { get; set; }
+        public string phone { get; set; }
         public string Email { get; set; }
         public string Bio { get; set; }
         public string Districts { get; set; }
 
         public Employe()
         {
-            Name = "";
-            Birthday = "";
-            Phone = "";
+            name = "";
+            birthday = "";
+            phone = "";
             Email = "";
             Bio = "";
             Districts = "";
@@ -21,15 +21,15 @@
 
         public Employe(string name)
         {
-            Name = name;
+            this.name = name;
         }
         public Employe(string name, string birthday) : this(name) 
         {
-            Birthday = birthday;
+            this.birthday = birthday;
         }
         public Employe(string name, string birthday, string phone) : this(name, birthday)
         {
-            Phone = phone;
+            this.phone = phone;
         }
         public Employe(string name, string birthday, string phone, string email) : this(name, birthday, phone)
         {
@@ -46,7 +46,7 @@
 
         public string Print()
         {
-            return $"Ім'я: {Name}\nДень народження: {Birthday}\nТелефон: {Phone}\nЕмейл: {Email}\n Біографія: {Bio}\n Задачі: {Districts}";
+            return $"Ім'я: {name}\nДень народження: {birthday}\nТелефон: {phone}\nЕмейл: {Email}\nБіографія: {Bio}\nЗадачі: {Districts}";
         }
 
 

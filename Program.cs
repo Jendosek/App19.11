@@ -11,6 +11,8 @@ namespace App19._11
             Console.OutputEncoding = Encoding.Unicode;
 
             Employe employe = new Employe();
+            Employe employe2 = new Employe("Женя", "20.11.2006", "0688170771", "bala01081977@gmail.com", "software developer with 0 years of work", "deze");
+            Console.WriteLine(employe2.Print());
 
         }
     }
