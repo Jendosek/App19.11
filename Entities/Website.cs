@@ -21,29 +21,26 @@ namespace App19._11.Entities
             Ip = "Default";
         }
 
-        Website(string name) : this()
+        public Website(string name) : this()
         {
             Name = name;
         }
-        Website(string name, string url) : this(name)
+        public Website(string name, string url) : this(name)
         {
             Url = url;
         }
-        Website(string name, string url, string description) : this(name, url)
+        public Website(string name, string url, string description) : this(name, url)
         {
             Description = description;
         }
-        Website(string name, string url, string description, string ip) : this(name, url, description)
+        public Website(string name, string url, string description, string ip) : this(name, url, description)
         {
             Ip = ip;
         }
 
-        public void Print()
+        public string Print()
         {
-            Console.WriteLine($"Name: {Name}");
-            Console.WriteLine($"Url: {Url}");
-            Console.WriteLine($"Description: {Description}");
-            Console.WriteLine($"Ip: {Ip}");
+            return $"Name: {Name}\nUrl: {Url}\nDescription: {Description}\nIp: {Ip}";
         }
     }
 }

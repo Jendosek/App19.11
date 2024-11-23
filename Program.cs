@@ -11,6 +11,7 @@ namespace App19._11
             Console.OutputEncoding = Encoding.Unicode;
 
             Website website = new Website("Google", "google.com", "Search engine", "fdfdfdfd");
+            Console.WriteLine(website.Print());
         }
     }
 }
